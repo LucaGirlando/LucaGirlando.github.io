@@ -163,8 +163,8 @@ function renderProjects(projects) {
         
         // Define badge style
         let badgeClass = 'badge-quantitative-analysis';
-        if (p.category === 'Interactive App') badgeClass = 'badge-interactive-app';
-        else if (p.category === 'Academic Research') badgeClass = 'badge-academic-research';
+        if (p.category === 'Interactive Web Apps') badgeClass = 'badge-interactive-app';
+        else if (p.category === 'Research & Thesis') badgeClass = 'badge-academic-research';
         
         // Tags extracted (python, streamlit, etc.)
         const techTags = extractTechTags(p);

@@ -46,7 +46,7 @@ Ogni progetto ha questa struttura:
 {
     "id": "p20",
     "title": "Titolo del Progetto",
-    "category": "Interactive App", // Scegli tra: "Interactive App", "Quantitative Analysis", "Academic Research"
+    "category": "Interactive Web Apps", // Scegli tra: "Interactive Web Apps", "Research & Thesis", "Leadership & Initiatives"
     "short_description": "Breve descrizione per la scheda...",
     "image_path": "public/images/p20.svg", // Path dello screenshot
     "app_links": ["https://link-della-tua-app.streamlit.app/"], // Vuoto [] se non c'è un'app

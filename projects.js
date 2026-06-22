@@ -3,7 +3,7 @@ const projectsData = [
     {
         "id": "p20",
         "title": "Portfolio Backtester",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Multi-asset portfolio simulation engine utilizing historical Yahoo Finance data and Monte Carlo projections.",
         "image_path": "public/images/p20.svg",
         "app_links": [
@@ -36,7 +36,7 @@ const projectsData = [
     {
         "id": "p19",
         "title": "Volatility Surface Analyzer",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Interactive 3D visualization and arbitrage scanning tool for implied volatility surfaces using Black-Scholes.",
         "image_path": "public/images/p19.svg",
         "app_links": [
@@ -64,7 +64,7 @@ const projectsData = [
     {
         "id": "p18",
         "title": "Investment Strategy Assignment",
-        "category": "Academic Research",
+        "category": "Research & Thesis",
         "short_description": "In this advanced university assignment, I conducted a comprehensive replication and comparative stress test of three distinct e...",
         "image_path": "public/images/p18.svg",
         "app_links": [],
@@ -107,7 +107,7 @@ const projectsData = [
     {
         "id": "p17",
         "title": "Testing Portfolio Models on the Sectors of the S&P 500",
-        "category": "Academic Research",
+        "category": "Research & Thesis",
         "short_description": "As a Quantitative Analyst within the Miura Financial Research team, I contributed to a rigorous empirical study designed to tes...",
         "image_path": "public/images/p17.svg",
         "app_links": [],
@@ -127,7 +127,7 @@ const projectsData = [
     {
         "id": "p16",
         "title": "Critical Analysis of the Opening Range Breakout Strategy on QQQ (2004-2024)",
-        "category": "Academic Research",
+        "category": "Research & Thesis",
         "short_description": "In this independent project, I conducted a rigorous quantitative analysis to replicate and \"stress test\" the Opening Range Brea...",
         "image_path": "public/images/p16.svg",
         "app_links": [],
@@ -153,12 +153,14 @@ const projectsData = [
     {
         "id": "p15",
         "title": "Fixed Income Project",
-        "category": "Quantitative Analysis",
+        "category": "Research & Thesis",
         "short_description": "In this project, I acted as the technical and operational bridge between the student team and our mentor, Costantino Forgione, ...",
         "image_path": "public/images/p15.svg",
         "app_links": [],
         "github_links": [],
-        "pdf_links": [],
+        "pdf_links": [
+            "public/pdfs/p15_Fixed_Income.pdf"
+        ],
         "features": [],
         "paragraphs": [
             "In this project, I acted as the technical and operational bridge between the student team and our mentor, Costantino Forgione, a former Managing Director at JPMorgan and Deutsche Bank. My primary contribution was twofold: I collaborated closely with Costantino to help the team execute the complex financial exercises, translating institutional pricing logic into solvable models, and I personally handled the entire LaTeX typesetting to ensure the final report met the rigorous presentation standards of a professional financial publication.",
@@ -169,7 +171,7 @@ const projectsData = [
     {
         "id": "p14",
         "title": "Financial Econometrics Project",
-        "category": "Academic Research",
+        "category": "Research & Thesis",
         "short_description": "I completed an advanced econometrics assignment using MATLAB, combining rigorous theoretical exercises with extensive empirical...",
         "image_path": "public/images/p14.svg",
         "app_links": [],
@@ -186,7 +188,7 @@ const projectsData = [
     {
         "id": "p13",
         "title": "Advanced Derivatives Analytics Platform",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Pricing Models: Black-Scholes, binomial trees, Monte Carlo simulations.",
         "image_path": "public/images/p13.svg",
         "app_links": [
@@ -209,7 +211,7 @@ const projectsData = [
     {
         "id": "p12",
         "title": "Quantitative Stock Dashboard",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Market Data Infrastructure:",
         "image_path": "public/images/p12.svg",
         "app_links": [
@@ -282,7 +284,7 @@ const projectsData = [
     {
         "id": "p11",
         "title": "EUR/PLN Monitor Pro",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Real-Time Rate Engine:",
         "image_path": "public/images/p11.svg",
         "app_links": [
@@ -347,7 +349,7 @@ const projectsData = [
     {
         "id": "p10",
         "title": "Options Pricing",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Black-Scholes Option Pricing",
         "image_path": "public/images/p10.svg",
         "app_links": [
@@ -423,7 +425,7 @@ const projectsData = [
     {
         "id": "p9",
         "title": "Options Trading Strategy Simulator with Black-Scholes Model",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "1. Set Option Parameters (Sidebar):",
         "image_path": "public/images/p9.svg",
         "app_links": [
@@ -482,8 +484,8 @@ const projectsData = [
     },
     {
         "id": "p8",
-        "title": "BSc Thesis with Invesco",
-        "category": "Academic Research",
+        "title": "BSc Thesis - Invesco Asset Management",
+        "category": "Research & Thesis",
         "short_description": "Analysis of thematic investment funds and consumer trends, developed during BSc thesis with Invesco Asset Management.",
         "image_path": "public/images/p8.svg",
         "app_links": [],
@@ -516,7 +518,7 @@ const projectsData = [
     {
         "id": "p7",
         "title": "Portfolio Return Calcolator (after crises)",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Portfolio Allocation: Choose from a selection of asset classes, including major stock indices (S&P 500, MSCI World, etc.), bond...",
         "image_path": "public/images/p7.svg",
         "app_links": [
@@ -546,62 +548,55 @@ const projectsData = [
     {
         "id": "p6",
         "title": "Koi Asset Management",
-        "category": "Quantitative Analysis",
-        "short_description": "A financial platform simplifying long-term ETF/bond allocation and weekly macro insights for young investors.",
+        "category": "Leadership & Initiatives",
+        "short_description": "Student association bridging quantitative finance and behavioral psychology, managing a dynamic ETF virtual fund.",
         "image_path": "public/images/p6.svg",
-        "app_links": [],
+        "app_links": [
+            "https://www.linkedin.com/company/koi-asset-management/"
+        ],
         "github_links": [],
         "pdf_links": [],
-        "features": [],
+        "features": [
+            "Systematic Asset Allocation: Implemented a custom allocation formula based on investor age and the Federal Reserve interest rate.",
+            "Behavioral Finance Focus: Investigated the intersection of psychology and economics, exploring cognitive biases in financial markets.",
+            "Performance Excellence: Achieved +5.70% returns in the virtual fund, outperforming the S&P 500 and MSCI World benchmarks.",
+            "Weekly Research: Published briefings on macroeconomic events, central bank policies, and sector-specific asset selection."
+        ],
         "paragraphs": [
-            "Koi Asset Management is a platform I created to engage young people with finance in an accessible yet technical way. Through a long-term virtual fund and weekly economic updates, we aim to simplify the world of finance while providing valuable insights.",
-            "The Koi Long Term Fund is designed with a precise and adaptive strategy to optimize returns while effectively managing risk. The portfolio allocation is determined using the formula:",
-            "Equity Allocation (%) = 125 - 20 × (current assumed age) - 5 × (current Fed rate)",
-            "This dynamic model adjusts the balance between equities and bonds based on age-related risk tolerance and current interest rate conditions. By tailoring the portfolio to these factors, the fund seeks to maximize growth potential while maintaining stability.",
-            "The fund invests in a diversified range of equity and bond ETFs, ensuring exposure across multiple sectors and geographies. This approach leverages disciplined allocation to capitalize on market opportunities, aligning investments with long-term financial growth objectives for its participants.",
-            "For the period covering November 24, December 24, and January 25. The fund delivered an impressive 5.7% return, outperforming our benchmark (4.31%) and even beating major equity indices like the S&P 500 (5.61%) and MSCI World (4.57%)."
+            "Koi Asset Management is a student-led financial association created to engage members with quantitative finance while bridging the gap between psychology and economics, exploring how cognitive biases and behavioral patterns influence investment decisions.",
+            "The platform manages the Koi Long Term Fund, a dynamic virtual asset allocation model designed to optimize returns while actively managing risk. Portfolio weights are adjusted based on age-related risk tolerance and interest rate expectations using a systematic formula: Equity Allocation (%) = 125 - 20 * (Age) - 5 * (Fed Rate).",
+            "For the winter period (Nov 2024 - Jan 2025), the fund achieved a 5.70% return, outperforming the S&P 500 (5.61%) and MSCI World (4.57%) benchmarks with lower drawdown. The association hosts weekly market updates and workshops to train analysts in behavioral finance."
         ],
         "menu_title": "Koi Asset Management"
     },
     {
         "id": "p5",
         "title": "SF Bicocca US Alpha Fund",
-        "category": "Quantitative Analysis",
-        "short_description": "Role as Portfolio Manager for a virtual fund at Starting Finance Bicocca Club, aiming to outperform the S&P 500.",
+        "category": "Leadership & Initiatives",
+        "short_description": "Role as Portfolio Manager for a virtual fund at Starting Finance Bicocca Club, scaling the division to 100+ members.",
         "image_path": "public/images/p5.svg",
-        "app_links": [],
+        "app_links": [
+            "https://www.linkedin.com/company/starting-finance/"
+        ],
         "github_links": [],
         "pdf_links": [],
         "features": [
-            "Determining the sector weights within our fund.",
-            "Training less experienced members in conducting macroeconomic, fundamental, and quantitative analyses to evaluate potential investments effectively.",
-            "Information Technology: 31%",
-            "Consumer Discrationary: 15%",
-            "Financials: 15%",
-            "Healthcare: 10%",
-            "Industrals: 9.5%",
-            "Communications Service: 7%",
-            "Consumer Staples: 3.5%",
-            "Energy: 2.5%",
-            "Real Estate: 2.5%",
-            "Utilities: 2%",
-            "Materials: 2%"
+            "Strategic Portfolio Management: Founded and managed a virtual S&P 500-beating fund, achieving a +1.52% positive alpha.",
+            "Division Leadership: Scaled the Starting Finance Bicocca Portfolio Management division from 5 to over 100 active members.",
+            "Mentoring & Training: Mentored 90+ junior analysts in macroeconomic, fundamental, and quantitative analysis, organizing workshops.",
+            "Risk Management: Maintained strict limit controls, capping the maximum drawdown of the sector-diversified portfolios to -8.5%."
         ],
         "paragraphs": [
-            "Positive spread: +1.05%",
-            "As the Head of the Portfolio Management Division, I am the founder and Portfolio Manager of the SF Bicocca Alpha Fund—a virtual fund designed to outperform the S&P 500.",
-            "Our team consists of approximately 40 members, organized into 11 sectors, mirroring the structure of the S&P 500. My role involves:",
-            "Starting Finance is Italy's leading network for young enthusiasts in finance, economics, and business. Through its clubs in universities across the country, it aims to promote financial literacy and provide students with opportunities to learn and engage with the world of investments and markets.",
-            "At Bicocca University, I am proud to be a part of the Starting Finance Club, where I hold the position of Head of the Portfolio Management Division.",
-            "The fund started on December 9, 2024",
-            "Q1 2025 (in March 9) the fund is overperforming the S&P 500 index (positive spread: +1.05%)"
+            "As the Head of the Portfolio Management Division, I founded and managed the SF Bicocca Alpha Fund—a virtual fund designed to systematically outperform the S&P 500 index. I scaled the division from an initial group of 5 members to a structured team of 100+ active members, organized into 11 GICS sector-specific analyst teams.",
+            "My role involved training 90+ junior analysts in quantitative analysis, financial modeling, and fundamental stock selection, defining the macro asset allocation strategy, and mentoring team leaders in conducting sector analysis.",
+            "During my tenure, the fund achieved +1.52% alpha relative to the S&P 500 index with a maximum drawdown restricted to -8.5%, demonstrating robust risk-adjusted returns during turbulent market regimes."
         ],
         "menu_title": "SF Bicocca Alpha Fund"
     },
     {
         "id": "p4",
         "title": "Asian Options Pricing",
-        "category": "Quantitative Analysis",
+        "category": "Research & Thesis",
         "short_description": "This project focuses on the application and comparison of several option pricing models, specifically:",
         "image_path": "public/images/p4.svg",
         "app_links": [],
@@ -643,7 +638,7 @@ const projectsData = [
     {
         "id": "p3",
         "title": "Advanced Bond Analytics Tool",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Select an analysis type, input parameters, and visualize results via interactive charts and metrics. Ideal for traders, portfol...",
         "image_path": "public/images/p3.svg",
         "app_links": [
@@ -670,7 +665,7 @@ const projectsData = [
     {
         "id": "p2",
         "title": "Investment Growth Calulator",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Once the application is running, follow these steps to use it:",
         "image_path": "public/images/p2.svg",
         "app_links": [
@@ -702,7 +697,7 @@ const projectsData = [
     {
         "id": "p1",
         "title": "Stock Insights: Prediction & Technical Analysis",
-        "category": "Interactive App",
+        "category": "Interactive Web Apps",
         "short_description": "Once the application is running, follow these steps to use it:- Enter Stock Ticker: In the sidebar, input the stock ticker symb...",
         "image_path": "public/images/p1.svg",
         "app_links": [

@@ -25,18 +25,13 @@ def process_features(features_list):
                 cleaned.append(c_part)
     return cleaned
 
-def determine_category(title, menu_title, app_links, pdf_links):
-    title_l = title.lower()
-    menu_l = menu_title.lower()
-    
-    if len(app_links) > 0:
-        return "Interactive App"
-    elif "thesis" in title_l or "thesis" in menu_l or "econometrics" in title_l or "econometrics" in menu_l or "assignment" in title_l:
-        return "Academic Research"
-    elif len(pdf_links) > 0:
-        return "Academic Research"
+def determine_category(path, title, menu_title, app_links):
+    if path in ["p5", "p6"]:
+        return "Leadership & Initiatives"
+    elif len(app_links) > 0:
+        return "Interactive Web Apps"
     else:
-        return "Quantitative Analysis"
+        return "Research & Thesis"
 
 def main():
     with open("portfolio_data.json", "r", encoding="utf-8") as f:
@@ -68,6 +63,10 @@ def main():
         title_clean = re.sub(r'\s*-\s*Heatmap\s*$', '', title_clean, flags=re.IGNORECASE)
         title_clean = title_clean.strip()
         
+        # Globally fix MSc Thesis -> BSc Thesis for Invesco
+        if "invesco" in title_clean.lower() or "invesco" in menu_title.lower():
+            title_clean = "BSc Thesis - Invesco Asset Management"
+            
         app_links = proj.get("app_links", [])
         github_links = proj.get("github_links", [])
         
@@ -89,6 +88,10 @@ def main():
             else:
                 local_pdf_links.append(pdf)
                 
+        # Fix for Fixed Income Project PDF which was manually uploaded
+        if path == "p15":
+            local_pdf_links = ["public/pdfs/p15_Fixed_Income.pdf"]
+            
         features = process_features(proj.get("features", []))
         paragraphs = [clean_text(p) for p in proj.get("paragraphs", []) if p.strip()]
         
@@ -101,7 +104,7 @@ def main():
                 continue
             filtered_paragraphs.append(p)
             
-        category = determine_category(title_clean, menu_title, app_links, local_pdf_links)
+        category = determine_category(path, title_clean, menu_title, app_links)
         
         # Synthesize a short description from first paragraph or first feature
         valid_paragraphs = [p for p in filtered_paragraphs if "sleeping" not in p.lower() and "get this app" not in p.lower()]
@@ -125,10 +128,41 @@ def main():
         # Specific fixes for project descriptions that we know
         if "BSc Thesis" in title_clean or "Invesco" in title_clean:
             short_desc = "Analysis of thematic investment funds and consumer trends, developed during BSc thesis with Invesco Asset Management."
-        elif "SF Bicocca" in title_clean:
-            short_desc = "Role as Portfolio Manager for a virtual fund at Starting Finance Bicocca Club, aiming to outperform the S&P 500."
-        elif "Koi Asset" in title_clean:
-            short_desc = "A financial platform simplifying long-term ETF/bond allocation and weekly macro insights for young investors."
+        elif "SF Bicocca" in title_clean or path == "p5":
+            short_desc = "Role as Portfolio Manager for a virtual fund at Starting Finance Bicocca Club, scaling the division to 100+ members."
+        elif "Koi Asset" in title_clean or path == "p6":
+            short_desc = "Student association bridging quantitative finance and behavioral psychology, managing a dynamic ETF virtual fund."
+            
+        # Custom content overrides for Starting Finance (p5) and Koi Asset Management (p6)
+        if path == "p6":
+            title_clean = "Koi Asset Management"
+            filtered_paragraphs = [
+                "Koi Asset Management is a student-led financial association created to engage members with quantitative finance while bridging the gap between psychology and economics, exploring how cognitive biases and behavioral patterns influence investment decisions.",
+                "The platform manages the Koi Long Term Fund, a dynamic virtual asset allocation model designed to optimize returns while actively managing risk. Portfolio weights are adjusted based on age-related risk tolerance and interest rate expectations using a systematic formula: Equity Allocation (%) = 125 - 20 * (Age) - 5 * (Fed Rate).",
+                "For the winter period (Nov 2024 - Jan 2025), the fund achieved a 5.70% return, outperforming the S&P 500 (5.61%) and MSCI World (4.57%) benchmarks with lower drawdown. The association hosts weekly market updates and workshops to train analysts in behavioral finance."
+            ]
+            features = [
+                "Systematic Asset Allocation: Implemented a custom allocation formula based on investor age and the Federal Reserve interest rate.",
+                "Behavioral Finance Focus: Investigated the intersection of psychology and economics, exploring cognitive biases in financial markets.",
+                "Performance Excellence: Achieved +5.70% returns in the virtual fund, outperforming the S&P 500 and MSCI World benchmarks.",
+                "Weekly Research: Published briefings on macroeconomic events, central bank policies, and sector-specific asset selection."
+            ]
+            app_links = ["https://www.linkedin.com/company/koi-asset-management/"]
+            
+        elif path == "p5":
+            title_clean = "SF Bicocca US Alpha Fund"
+            filtered_paragraphs = [
+                "As the Head of the Portfolio Management Division, I founded and managed the SF Bicocca Alpha Fund—a virtual fund designed to systematically outperform the S&P 500 index. I scaled the division from an initial group of 5 members to a structured team of 100+ active members, organized into 11 GICS sector-specific analyst teams.",
+                "My role involved training 90+ junior analysts in quantitative analysis, financial modeling, and fundamental stock selection, defining the macro asset allocation strategy, and mentoring team leaders in conducting sector analysis.",
+                "During my tenure, the fund achieved +1.52% alpha relative to the S&P 500 index with a maximum drawdown restricted to -8.5%, demonstrating robust risk-adjusted returns during turbulent market regimes."
+            ]
+            features = [
+                "Strategic Portfolio Management: Founded and managed a virtual S&P 500-beating fund, achieving a +1.52% positive alpha.",
+                "Division Leadership: Scaled the Starting Finance Bicocca Portfolio Management division from 5 to over 100 active members.",
+                "Mentoring & Training: Mentored 90+ junior analysts in macroeconomic, fundamental, and quantitative analysis, organizing workshops.",
+                "Risk Management: Maintained strict limit controls, capping the maximum drawdown of the sector-diversified portfolios to -8.5%."
+            ]
+            app_links = ["https://www.linkedin.com/company/starting-finance/"]
             
         cleaned_projects.append({
             "id": path,
