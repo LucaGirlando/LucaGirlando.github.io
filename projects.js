@@ -601,7 +601,9 @@ const projectsData = [
         "image_path": "public/images/p4.svg",
         "app_links": [],
         "github_links": [],
-        "pdf_links": [],
+        "pdf_links": [
+            "public/pdfs/p4_Asian_Options_Pricing.pdf"
+        ],
         "features": [
             "Binomial Model",
             "Black-Scholes Model",

@@ -88,9 +88,11 @@ def main():
             else:
                 local_pdf_links.append(pdf)
                 
-        # Fix for Fixed Income Project PDF which was manually uploaded
+        # Fix for Fixed Income & Options Pricing PDFs manually uploaded
         if path == "p15":
             local_pdf_links = ["public/pdfs/p15_Fixed_Income.pdf"]
+        elif path == "p4":
+            local_pdf_links = ["public/pdfs/p4_Asian_Options_Pricing.pdf"]
             
         features = process_features(proj.get("features", []))
         paragraphs = [clean_text(p) for p in proj.get("paragraphs", []) if p.strip()]
