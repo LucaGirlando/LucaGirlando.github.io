@@ -176,7 +176,12 @@ function renderProjects(projects) {
         const hasPdf = p.pdf_links.length > 0;
         
         let linkShortcuts = '';
-        if (hasApp) linkShortcuts += `<a href="${p.app_links[0]}" target="_blank" title="Try the Web App" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>`;
+        if (hasApp) {
+            const isLinkedin = p.app_links[0].includes('linkedin.com');
+            const iconClass = isLinkedin ? 'fab fa-linkedin-in' : 'fas fa-external-link-alt';
+            const titleText = isLinkedin ? 'Visit LinkedIn Page' : 'Try the Web App';
+            linkShortcuts += `<a href="${p.app_links[0]}" target="_blank" title="${titleText}" onclick="event.stopPropagation()"><i class="${iconClass}"></i></a>`;
+        }
         if (hasGithub) linkShortcuts += `<a href="${p.github_links[0]}" target="_blank" title="Code on GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>`;
         if (hasPdf) linkShortcuts += `<a href="${p.pdf_links[0]}" target="_blank" title="Download PDF Report" onclick="event.stopPropagation()"><i class="fas fa-file-pdf"></i></a>`;
         
@@ -252,9 +257,12 @@ function openModal(id) {
     
     let actionButtonsHtml = '';
     if (hasApp) {
+        const isLinkedin = p.app_links[0].includes('linkedin.com');
+        const btnText = isLinkedin ? 'Visit LinkedIn Page' : 'Try the Web App';
+        const btnIcon = isLinkedin ? 'fab fa-linkedin' : 'fas fa-play-circle';
         actionButtonsHtml += `
             <a href="${p.app_links[0]}" target="_blank" class="btn-action btn-primary-action">
-                <i class="fas fa-play-circle"></i> Try the Web App
+                <i class="${btnIcon}"></i> ${btnText}
             </a>
         `;
     }
