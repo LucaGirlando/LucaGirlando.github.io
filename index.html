@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luca Girlando's Portfolio - Quantitative Finance & Investment Risk Analyst. Explore my interactive web applications, quantitative projects, and academic research.">
+    <meta name="author" content="Luca Girlando">
+    <title>Luca Girlando | Quantitative Finance Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Background mesh gradient -->
+    <div class="bg-gradient-mesh"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-pie"></i>
+                <span>Luca Girlando</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#progetti" class="nav-link">Projects</a></li>
+                    <li><a href="#about" class="nav-link">About Me</a></li>
+                    <li><a href="#contatti" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="btn-theme-toggle" id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="btn-mobile-menu" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Investment Risk Analyst @ Amundi</span>
+                    <h1 class="hero-title">Hi, I'm Luca</h1>
+                    <p class="hero-desc">
+                        I work as an <strong>Investment Risk Analyst</strong> at <strong>Amundi</strong> in Munich. 
+                        I hold a double Master of Science (MSc) degree in <strong>Quantitative Finance</strong> from London and Milan. 
+                        My background includes a Wealth Management internship at <strong>FinecoBank</strong> and asset management research for my MSc thesis in collaboration with <strong>Invesco</strong>.
+                    </p>
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/luca-girlando-62a632230/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/LucaGirlando" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:lucagirla2001@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+393664053480" class="social-icon" title="Phone"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="hero-img-inner">
+                        <img src="public/images/luca_girlando.jpg" alt="Luca Girlando">
+                    </div>
+                    <div class="hero-image-glow"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <!-- Quick Stats -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Financial Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Streamlit Web Apps</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Double MSc</div>
+                        <div class="stat-label">Quantitative Finance</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="portfolio-section" id="progetti">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="section-desc">Explore my interactive web applications, quantitative analyses, and academic publications, ordered from most recent to oldest.</p>
+                </div>
+                
+                <div class="portfolio-controls">
+                    <!-- Search input -->
+                    <div class="search-bar-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" class="search-bar" placeholder="Search projects by title, technology, or keyword...">
+                    </div>
+                    
+                    <!-- Category pills filters -->
+                    <div class="filters-wrapper">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="Interactive App">Interactive Web Apps</button>
+                        <button class="filter-btn" data-filter="Quantitative Analysis">Quantitative Analysis</button>
+                        <button class="filter-btn" data-filter="Academic Research">Research & Thesis</button>
+                    </div>
+                    
+                    <!-- Search Results Count -->
+                    <div class="results-count" id="results-count">Found 20 projects</div>
+                </div>
+                
+                <!-- Dynamic Grid container -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Managed by JavaScript (app.js) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-desc">My academic background, professional experience, and personal interests.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Biography Card -->
+                    <div class="bio-card">
+                        <h3 class="bio-title">Profile & Passions</h3>
+                        <p class="bio-text">
+                            I am driven by a deep interest in financial markets, risk modeling, and quantitative software engineering. I enjoy translating complex financial theories into clean, efficient code, as shown by the various Streamlit applications I have developed in Python to streamline portfolio rebalancing, bond pricing, and exotic option valuation.
+                        </p>
+                        <p class="bio-text">
+                            Beyond quantitative finance, I have a diverse set of personal interests. I have been playing competitive football for 17 years, manage a personal long-term ETF portfolio, enjoy sketching and drawing, and follow the world of anime and manga.
+                        </p>
+                        <div class="interests-grid">
+                            <div class="interest-item"><i class="fas fa-futbol"></i> Competitive Football (17 Years)</div>
+                            <div class="interest-item"><i class="fas fa-piggy-bank"></i> ETF Portfolio & Investing</div>
+                            <div class="interest-item"><i class="fas fa-paint-brush"></i> Drawing & Sketching</div>
+                            <div class="interest-item animanga-item">
+                                <i class="fas fa-book-open"></i> Anime & Manga
+                                <span class="hover-tip"><i class="fas fa-info-circle"></i> Lists</span>
+                                <div class="animanga-tooltip">
+                                    <div class="tooltip-columns">
+                                        <div class="tooltip-col">
+                                            <h5>TOP 10 ANIME</h5>
+                                            <ol>
+                                                <li>Attack on Titan</li>
+                                                <li>Mob Psycho 100</li>
+                                                <li>Hunter X Hunter <span class="ongoing">*</span></li>
+                                                <li>Neon Genesis Evangelion</li>
+                                                <li>Full Metal Alchemist Brotherhood</li>
+                                                <li>Pluto</li>
+                                                <li>Paranoia Agent</li>
+                                                <li>Cowboy Bebop</li>
+                                                <li>Tatami Galaxy</li>
+                                                <li>Sonny Boy</li>
+                                            </ol>
+                                            <div class="om-item"><strong>OM:</strong> Welcome to the NHK</div>
+                                        </div>
+                                        <div class="tooltip-col">
+                                            <h5>TOP 10 MANGA</h5>
+                                            <ol>
+                                                <li>Berserk <span class="ongoing">*</span></li>
+                                                <li>Monster</li>
+                                                <li>Slam Dunk</li>
+                                                <li>Rocky Joe <span class="ongoing">*</span></li>
+                                                <li>Vagabond</li>
+                                                <li>20th Century Boys</li>
+                                                <li>Goodnight Punpun</li>
+                                                <li>Akira</li>
+                                                <li>Jojo Steel Ball Run</li>
+                                                <li>Chainsaw Man <span class="ongoing">*</span></li>
+                                            </ol>
+                                            <div class="om-item"><strong>OM:</strong> Alita: Battle Angel</div>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip-footer">* = ongoing / still in progress</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education/Experience Timeline -->
+                    <div class="timeline">
+                        <h3 class="bio-title" style="margin-left: -2rem; margin-bottom: 2rem;"><i class="fas fa-graduation-cap"></i> Experience & Education</h3>
+                        
+                        <!-- Amundi Period -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">August 2026 - Present</div>
+                            <h4 class="timeline-title">Investment Risk Analyst</h4>
+                            <div class="timeline-subtitle">Amundi, Munich</div>
+                            <p class="timeline-desc">
+                                • Monitored market, liquidity, and credit risk metrics for diverse fund structures using VaR models and stress-testing frameworks.<br>
+                                • Executed daily investment compliance and limit control procedures (UCITS/AIFMD compliance, ESG constraints, and portfolio breaches).<br>
+                                • Automated risk reporting workflows and key risk indicators (KRIs) data extraction using advanced Excel and Python.
+                            </p>
+                        </div>
+                        
+                        <!-- MSc Period -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2024 - 2026</div>
+                            <h4 class="timeline-title">Double MSc & Student Leadership</h4>
+                            <div class="timeline-subtitle">London & Milan-Bicocca</div>
+                            <p class="timeline-desc">
+                                • Double MSc in Economics & Finance (Milano-Bicocca) & Quantitative Finance with Data Science (Birkbeck, University of London).<br>
+                                • <strong>Starting Finance Bicocca:</strong> Founder & Head of Portfolio Management (managed 11 portfolios, S&P 500 virtual fund achieving +1.52% alpha, mentored 90+ analysts).<br>
+                                • <strong>Miura Financial Research:</strong> Quant Researcher (developed pricing models for exotic/barrier options and sector portfolio models).<br>
+                                • <strong>Koi Asset Management:</strong> Founder (designed dynamic age/rate-based ETF allocation model delivering +5.7% outperformance).
+                            </p>
+                        </div>
+                        
+                        <!-- BSc Period -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2021 - 2024</div>
+                            <h4 class="timeline-title">BSc & Professional Internships</h4>
+                            <div class="timeline-subtitle">Milano-Bicocca University</div>
+                            <p class="timeline-desc">
+                                • BSc in Banking and Finance (Milano-Bicocca).<br>
+                                • <strong>FinecoBank (Wealth Management Intern):</strong> Supported management of €110M AUM for 600+ clients, optimizing risk-adjusted returns and Sharpe ratios.<br>
+                                • <strong>Invesco Asset Management (MSc Thesis Researcher):</strong> Conducted factor-risk, liquidity, and performance analysis on the $2.3B Global Consumer Trends Fund.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contatti">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-desc">Let's connect! Feel free to reach out for opportunities, discussions, or collaboration.</p>
+                </div>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
+                        <h4 class="contact-title">Email</h4>
+                        <span class="contact-value">lucagirla2001@gmail.com</span>
+                        <div class="btn-contact" id="copy-email-btn" onclick="copyToClipboard('lucagirla2001@gmail.com', 'copy-email-btn')">
+                            <i class="far fa-copy"></i> Copy Email
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper"><i class="fas fa-phone"></i></div>
+                        <h4 class="contact-title">Phone</h4>
+                        <span class="contact-value">+39 366 405 3480</span>
+                        <div class="btn-contact" id="copy-phone-btn" onclick="copyToClipboard('+393664053480', 'copy-phone-btn')">
+                            <i class="far fa-copy"></i> Copy Phone
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper"><i class="fab fa-linkedin"></i></div>
+                        <h4 class="contact-title">LinkedIn</h4>
+                        <span class="contact-value">Luca Girlando</span>
+                        <a href="https://www.linkedin.com/in/luca-girlando-62a632230/" target="_blank" class="btn-contact">
+                            <i class="fas fa-external-link-alt"></i> Visit Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/luca-girlando-62a632230/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/LucaGirlando" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:lucagirla2001@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>Copyright &copy; 2026 Luca Girlando. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Modal Overlay -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Window">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-container-content">
+                <!-- Managed by JavaScript (app.js) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loaded JS Data first, then logical script -->
+    <script src="projects.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
